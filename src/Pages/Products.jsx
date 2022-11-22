@@ -12,16 +12,16 @@ const Products = () => {
       "Content-type": "application/json; charset=UTF-8",
     },
   });
-  // instance.interceptors.response.use(
-  //   function (response) {
-  //     console.log("savdjhsadgjacdvgjahdgashjdsgaja", response);
-  //     return response;
-  //   },
-  //   function (error) {
-  //     console.log(error);
-  //     return Promise.reject(error);
-  //   }
-  // );
+  instance.interceptors.response.use(
+    function (response) {
+      console.log("savdjhsadgjacdvgjahdgashjdsgaja", response);
+      return response;
+    },
+    function (error) {
+      console.log(error);
+      return Promise.reject(error);
+    }
+  );
   const getData = async () => {
     const rosponse = await instance.get();
     console.log(rosponse.data);
